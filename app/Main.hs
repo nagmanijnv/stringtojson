@@ -1,73 +1,23 @@
 module Main where
 
--- import Data.Aeson
--- import Data.Char
--- import qualified Data.HashMap.Strict as DHS
--- import qualified Data.List.Extra as DLE
--- import Data.Maybe
--- import Data.Scientific
--- import qualified Data.Set as DS
--- import Data.Text as DT
--- import Data.Vector as DV
--- import GHC.Generics
--- import Integer.Integer
--- import qualified Network.HTTP.Types as H
--- import Network.Wai
--- import Network.Wai.Handler.Warp
--- import Servant.API
--- import Servant.Server
--- import Servant
--- import Text.Read hiding (String)
-
--- curl for the API
--- curl --location 'http://localhost:8081/stringtojson' \
--- --header 'Content-Type: application/json' \
--- --data '{
---     "encodedString": "#09date|1997-02-06#02name|bob#01age|20#13hasPassport|Y,y,t#12access|read_db,write_db"
--- }'
-
--- Sample input and output
-
--- Input: "encodedString": "#09date|1997-02-06#02name|bob#01age|20#13hasPassport|Y,y,t#12access|read_db,write_db"
--- Output: 
--- {
---     "errorMessage": [
---         "ab code is not valid"
---     ],
---     "message": "parser failed, something wrong with the input",
---     "status": false
--- }
-
--- Input : "encodedString": "#00date|1997-02-06#02name|bob#01age|20#13hasPassport|Y,y,t#12access|read_db,write_db"
--- Output: 
--- {
---     "access": [
---         "read_db",
---         "write_db"
---     ],
---     "age": 20,
---     "date": "1997-02-06",
---     "hasPassport": [
---         true,
---         true,
---         true
---     ],
---     "name": "bob"
--- }
-
--- Input: "encodedString": "#00date|1997-02-06#02name|bob#01age|20#03hasPassport|Y#12access|read_db,write_db,view_logs"
--- Output:
--- {
---     "access": [
---         "read_db",
---         "write_db",
---         "view_logs"
---     ],
---     "age": 20,
---     "date": "1997-02-06",
---     "hasPassport": true,
---     "name": "bob"
--- }
+import Data.Aeson
+import Data.Char
+import qualified Data.HashMap.Strict as DHS
+import qualified Data.List.Extra as DLE
+import Data.Maybe
+import Data.Scientific
+import qualified Data.Set as DS
+import Data.Text as DT
+import Data.Vector as DV
+import GHC.Generics
+import Integer.Integer
+import qualified Network.HTTP.Types as H
+import Network.Wai
+import Network.Wai.Handler.Warp
+import Servant.API
+import Servant.Server
+import Servant
+import Text.Read hiding (String)
 
 type Record = DHS.HashMap Text Value
 
