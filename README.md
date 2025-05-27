@@ -25,8 +25,11 @@ cabal run
 
 ## Sample input and output
 
--- Input: "encodedString": "#09date|1997-02-06#02name|bob#01age|20#13hasPassport|Y,y,t#12access|read_db,write_db"
--- Output: 
+- Input:
+```
+"encodedString": "#09date|1997-02-06#02name|bob#01age|20#13hasPassport|Y,y,t#12access|read_db,write_db"
+```
+- Output: 
 ```json
 {
     "errorMessage": [
@@ -37,8 +40,11 @@ cabal run
 }
 ```
 
--- Input : "encodedString": "#00date|1997-02-06#02name|bob#01age|20#13hasPassport|Y,y,t#12access|read_db,write_db"
--- Output: 
+- Input :
+```
+"encodedString": "#00date|1997-02-06#02name|bob#01age|20#13hasPassport|Y,y,t#12access|read_db,write_db"
+```
+- Output: 
 ```json
 {
     "access": [
@@ -56,8 +62,11 @@ cabal run
 }
 ```
 
--- Input: "encodedString": "#00date|1997-02-06#02name|bob#01age|20#03hasPassport|Y#12access|read_db,write_db,view_logs"
--- Output:
+- Input: 
+```
+"encodedString": "#00date|1997-02-06#02name|bob#01age|20#03hasPassport|Y#12access|read_db,write_db,view_logs"
+```
+- Output:
 ```json
 {
     "access": [
